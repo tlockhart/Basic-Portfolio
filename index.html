@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Portfolio</title>
-    <link rel:"stylesheet" href="assets/css/reset.css">
-    <link rel:"stylesheet" href="assets/css/style.css">
+    <title>Index</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <html>
 
+
 <body>
-    <header>
-        <nav>
-            <h1>Tony Lockhart</h1>
-            <ul>
-                <li>About</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h2>About Me</h2>
-        <hr>
-        <img id="profile" alt="Profile Picture" src="assets/images/tlockhart.jpg">
-        <p>I have worked as a System Engineer for over 10 years.  Although system automation has been my main area of expertise, I also have a passion for design.  The desire to merge the two, led me to earn my Masters in Digital Media and become a Full Stack Developer. </p>
-        <p>Web Development has allowed me to focus my creative expression on thoughtful and sensible design.</p>
-        <p>When not chained to my desk staring at pixels, I enjoy roller skating, bike riding, and walking nature trails.</p>
-    </section>
-    <footer>
-        <div class="stripe"></div>
-        <p>Copyright &copy;</p>
-    </footer>
+
+    <div class="container">
+        <header>
+            <nav>
+                <!--H1-->
+                <div id="navWrapper">
+                    <h1>Tony Lockhart</h1>
+                    <ul>
+                        <li>
+                            <a href="index.html">About</a>
+                            <span class="divider">|</span>
+                        </li>
+                        <!--comment
+                                -->
+                        <li>
+                            <a href="portfolio.html">Portfolio</a>
+                            <span class="divider">|</span>
+                        </li>
+                        <!--comment
+                                -->
+                        <li>
+                            <a href="contact.html">Contact</a>
+                            <!--span class="divider">|</span-->
+                        </li>
+                    </ul>
+                </div>
+                <!--navWrapper-->
+            </nav>
+        </header>
+        <section class="clearfix sectionOverFlow">
+            <div class="sectionWrapper">
+                <h2>About Me</h2>
+                <hr>
+                <img id="profilePic" alt="Profile Picture" src="assets/images/tlockhart.png">
+                <article id="articleSpace">
+                    <p>I have worked as a System Engineer for over 10 years. Although system automation has been my main area
+                        of expertise, I also have a passion for design. My desire to merge the two fields, led me to earn
+                        my Masters in Digital Media and become a Full Stack Developer. </p>
+                    <p>Web Development has allowed me to focus my creative expression on thoughtful and sensible design.</p>
+                    <p>When not chained to my desk staring at pixels, I enjoy reading, bike riding, and walking nature trails.</p>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <div class="stripe"></div>
+            <p>Copyright &copy;</p>
+        </footer>
+    </div>
+    <!--Container-->
 </body>
 
 </html>
