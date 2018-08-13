@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <title>contact</title>
+    <link rel: "stylesheet" href="assets/css/reset.css">
+    <link rel: "stylesheet" href="assets/css/style.css">
+</head>
+
+<html>
+
+<body>
+    <header>
+        <nav>
+            <h1>Tony Lockhart</h1>
+            <ul>
+                <li>About</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>About Me</h2>
+        <hr>
+        <form>
+            <fieldset>
+                <!--action="/login" method="post">-->
+                <label for="name">Name&nbsp;</label>
+                <!--Input Element used to obtain a single line of text-->
+                <input type="text" name="name" id="name" value="John Smith">
+                <label for="email">Email&nbsp;</label>
+                <input type="email" name="email" id="email" value="example@gmail.com">
+                <label for="message">Message&nbsp;</label>
+                <!--Used to obtain multiple lines of text. Style using W and H in CSS-->
+                <textarea name="message" id="message">Add your comment here</textarea>
+                <input type="submit" name="submit" value="Send">
+                <br>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div class="stripe"></div>
+        <p>Copyright &copy;</p>
+    </footer>
+</body>
+</html>
