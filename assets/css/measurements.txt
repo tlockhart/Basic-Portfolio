@@ -1,0 +1,9 @@
+Padding around name (h1) 30px
+
+Top gray 40px (section-content margin-top:40px)
+Top White Gutter 40px.(h2 padding-top 40px)
+Left White Gutter 30px. (section-content-wrapper padding 0px 30px)
+Padding around section title (h2 padding-top 40px 30px 30px 30px))
+Bottom White Padding 30px (Section-content-wrapper padding-bottom:30px)
+Bottom Gray Gutter 40px.(section-content margin-top:40px)
+
