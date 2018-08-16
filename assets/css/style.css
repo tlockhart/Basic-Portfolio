@@ -51,8 +51,14 @@ nav a:link, nav a:visited {
     text-decoration: none;
     font-weight: bold;
 }
-nav a:hover, nav a:active {
+nav a:hover {
     color:#4aaaa5;
+}
+nav a:visited{
+    color:#377F7C;
+}
+nav a:active{
+    color:#84F6F1;
 }
 li{
     display: inline-block;
@@ -194,4 +200,19 @@ CONTACT FORM
      padding:5px 10px;
      border: none;
  }
+ .btn-properties:hover{
+    /*margin-bottom: 20px;*/
+    background-color: #dddddd;
+    color: #4aaaa5;
+    /*padding:5px 10px;*/
+    border: none;
+}
+.btn-properties:active{
+    /*outline: 5px solid gray;*/
+    /*outline-offset: 10px;*/
+    box-sizing:border-box;
+    height:25.2px;
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
+  }
  
