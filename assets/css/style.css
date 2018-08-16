@@ -1,7 +1,19 @@
 *{
     box-sizing:border-box;
+    /*******************
+    Flex Step 1 of
+    *******************
+    height:100%;*/
+    /********************/
 }
 body{
+    /*******************
+    Flex Step 2 of
+    *******************
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+    /********************/
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     line-height: 150%;
     color:#777777;/*Soften the font text*/
@@ -12,22 +24,13 @@ h1, h2{
 p{
    margin-bottom:20px; 
 }
+/***************************
+HEADER
+***************************/
 header{
-    margin:0;
-    padding:0;
-}
-nav{
-    position:relative;
     background: white;
     text-align: right;
     border-bottom: 1px solid #cccccc;
-}
-#navWrapper{
-    width:960px;
-    margin:0 auto;
-    /*background-color:blue;*/
-    padding:30px;
-    position:relative;
 }
 h1{
     position:absolute;
@@ -44,6 +47,16 @@ h2{
     padding: 40px 30px 30px 0px;
     font-weight: bold;
     font-size:24px;
+}
+/***************************
+NAV BAR
+***************************/
+nav{
+    width:960px;
+    margin:0 auto;
+    /*background-color:blue;*/
+    padding:30px;
+    position:relative;
 }
 nav a:link, nav a:visited {
     color: #cccccc;
@@ -71,6 +84,9 @@ li{
     top:0px;
     color:#dddddd;
 }
+/***************************
+MAIN CONTENT
+***************************/
 .container{
     /* background:url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete_seamless.png");*/
    background: url(../images/concrete_seamless.png);
@@ -82,14 +98,19 @@ li{
     margin-bottom: 15px;/*15px more is added from section-content margin, so total bottom margin is 30px*/
     margin-top:30px;
 }
-/*hr{
+hr{
     margin:0;
     padding:0;
-}*/
-#articleSpace{
+    border-style:solid;
+    color:#cccccc;
+}
+/***************************
+SECTION
+***************************/
+#aboutMeParaMargin{
     margin-top:30px;
 }
-.section-content-wrapper{
+main{
     width:960px;
     /*margin-left: auto;
     margin-right: auto;*/
@@ -100,9 +121,10 @@ li{
     padding:0px 30px;/*Display left/right white padding*/
     /*padding-bottom: 30px;*/
     border: 1px solid #dddddd;
+    flex: 1 0 auto;/*Sticky footer*/
 
 }
-.section-content{
+.main-content{
     /*background-color: teal;*/
     /*margin-top:40px;/*Display top gray margin*/
     /*margin-bottom:40px;/*Display bottom gray margin*/
@@ -111,13 +133,13 @@ li{
   /*******************************/
  /*Images*/
  /********************************/
- .img-content-wrapper{
+ .img-wrapper{
       width: 550px;
       /*background-color:yellow;*/
       padding-top:15px;/*15px more is added from img-content margin, so gutter is 30px*/
       padding-bottom:15px;/*15px more is added from img-content margin, so gutter is 30px*/
   }
- .img-content {
+ .image {
     float: left;
     margin: 15px 15px 15px 0px;/*40px in the middle of each box*/
     /*border:1px solid red;*/
@@ -132,29 +154,6 @@ li{
     clear:both;
     margin:0;
   }
-
-footer{
-    background-color:#666666;
-    color:#dddddd;
-    height:50px;
-    position:relative;
-   text-align:center;
-   font-size: 10px;
-   font-weight: bold;
-}
-.stripe{
-    height:4px;
-    background:#4aaaa5;
-}
-footer p{
-    padding-top:25px;
-}
-hr{
-    margin:0;
-    padding:0;
-    border-style:solid;
-    color:#cccccc;
-}
 
 /***************************
 CONTACT FORM
@@ -193,6 +192,10 @@ CONTACT FORM
       margin-bottom:15px;/*15px more is added from section-content margin, so total bottom margin is 30px*/
       /*background-color: orange;*/
   }
+
+/***************************
+BUTTON
+***************************/
  .btn-properties{
      margin-bottom: 20px;
      background-color: #4aaaa5;
@@ -201,18 +204,34 @@ CONTACT FORM
      border: none;
  }
  .btn-properties:hover{
-    /*margin-bottom: 20px;*/
     background-color: #dddddd;
     color: #4aaaa5;
-    /*padding:5px 10px;*/
     border: none;
 }
 .btn-properties:active{
-    /*outline: 5px solid gray;*/
-    /*outline-offset: 10px;*/
     box-sizing:border-box;
     height:25.2px;
     border-bottom: 2px solid gray;
     border-right: 2px solid gray;
   }
- 
+
+/***************************
+FOOTER
+***************************/
+footer{
+    background-color:#666666;
+    color:#dddddd;
+    height:50px;
+    position:relative;
+   text-align:center;
+   font-size: 10px;
+   font-weight: bold;
+   flex-shrink: 0;/*Sticky Footer*/
+}
+.stripe{
+    height:4px;
+    background:#4aaaa5;
+}
+footer p{
+    padding-top:25px;
+}
