@@ -1,20 +1,21 @@
 *{
     box-sizing:border-box;
-    /*******************
-    Flex Step 1 of
-    *******************
-    height:100%;*/
-    /********************/
+}
+html, body{
+     /****************************
+    Flex Sticky Footer Step 1 of 4
+    *****************************/
+    height:100%;
+    /*****************************/
 }
 body{
-    /*******************
-    Flex Step 2 of
-    *******************
+    /*****************************
+    Flex Sticky Footer Step 2 of 4
+    ******************************/
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
-    /********************/
-    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    /*****************************/
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     line-height: 150%;
     color:#777777;/*Soften the font text*/
  }
@@ -23,6 +24,8 @@ h1, h2{
 }
 p{
    margin-bottom:20px; 
+   line-height: 175%;
+   letter-spacing: -.10px;
 }
 /***************************
 HEADER
@@ -91,11 +94,17 @@ MAIN CONTENT
     /* background:url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete_seamless.png");*/
    background: url(../images/concrete_seamless.png);
     margin:0;
+    overflow:auto;/*Required so the container can completely encapsulate the main element*/
+    /*****************************
+    FLEX STICKY FOOTER STEP 3 of 4
+    ******************************/
+    flex: 1 0 auto;
+    /*****************************/
 }
 #profilePic{
     float:left;
     margin-right: 25px;
-    margin-bottom: 15px;/*15px more is added from section-content margin, so total bottom margin is 30px*/
+    margin-bottom: 25px;/*15px more is added from main-content padding-bottom: 15px, so total bottom margin is 40px*/
     margin-top:30px;
 }
 hr{
@@ -104,40 +113,31 @@ hr{
     border-style:solid;
     color:#cccccc;
 }
-/***************************
-SECTION
-***************************/
-#aboutMeParaMargin{
+.contentTopMargin{
     margin-top:30px;
 }
 main{
     width:960px;
-    /*margin-left: auto;
-    margin-right: auto;*/
-    margin: 0px auto;
-    margin-top:40px;/*Display top gray margin*/
-    margin-bottom:40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:40px;/*Required to display top gray margin*/
+    margin-bottom:40px;/*Required to display bottom gray margin, container requires overflow property*/
     background: #ffffff;
     padding:0px 30px;/*Display left/right white padding*/
-    /*padding-bottom: 30px;*/
     border: 1px solid #dddddd;
-    flex: 1 0 auto;/*Sticky footer*/
-
 }
 .main-content{
     /*background-color: teal;*/
-    /*margin-top:40px;/*Display top gray margin*/
-    /*margin-bottom:40px;/*Display bottom gray margin*/
-    padding-bottom: 15px;/*15px more is added from img-content margin, so total white padding is 30px*/
+    padding-bottom: 15px;/*padding-bottom: 15px + margin-bottom: 25px, from profilePic, makes gutter even with h2 padding-top: 40px*/
 }
-  /*******************************/
+/*******************************/
  /*Images*/
  /********************************/
  .img-wrapper{
       width: 550px;
       /*background-color:yellow;*/
-      padding-top:15px;/*15px more is added from img-content margin, so gutter is 30px*/
-      padding-bottom:15px;/*15px more is added from img-content margin, so gutter is 30px*/
+      padding-top:15px;/*15px more is added from image margin, so gutter is 30px*/
+      padding-bottom:10px;/*10px, +15px from image, and 15 from the main-content, makes total bottom padding equal 40px*/
   }
  .image {
     float: left;
@@ -170,7 +170,6 @@ CONTACT FORM
   .contact-group select,
   .contact-group textarea {
     border: 1px solid #c6c9cc;
-    /*color: #888;*/
     /*make all the fields block instead of inline*/
     display: block;
     margin: 5px 0 10px 0;
@@ -188,8 +187,7 @@ CONTACT FORM
     height: 78px;
   }
   form{
-      margin-top: 30px;
-      margin-bottom:15px;/*15px more is added from section-content margin, so total bottom margin is 30px*/
+      margin-bottom:15px;/*15px more is added from main-content padding-bottom:15px, so total bottom margin is 30px*/
       /*background-color: orange;*/
   }
 
@@ -197,10 +195,12 @@ CONTACT FORM
 BUTTON
 ***************************/
  .btn-properties{
-     margin-bottom: 20px;
+     margin-bottom: 10px;
      background-color: #4aaaa5;
      color: #ffffff;
-     padding:5px 10px;
+     padding-left: 10px;
+     padding-right:10px;
+     padding-top:5px;
      border: none;
  }
  .btn-properties:hover{
@@ -222,11 +222,15 @@ footer{
     background-color:#666666;
     color:#dddddd;
     height:50px;
-    position:relative;
    text-align:center;
    font-size: 10px;
    font-weight: bold;
-   flex-shrink: 0;/*Sticky Footer*/
+
+   /**********************************/
+   /*FLEX STICKY FOOTER STEP 4 of 4***
+   /**********************************/
+   flex-shrink:0;
+   /**********************************/
 }
 .stripe{
     height:4px;
