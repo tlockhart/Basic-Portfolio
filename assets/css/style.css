@@ -125,6 +125,7 @@ main{
     background: #ffffff;
     padding:0px 30px;/*Display left/right white padding*/
     border: 1px solid #dddddd;
+    overflow:hidden;
 }
 .main-content{
     /*background-color: teal;*/
@@ -133,15 +134,26 @@ main{
 /*******************************/
  /*Images*/
  /********************************/
- .img-wrapper{
-      width: 550px;
+ .img-wrapper-lt{
+    float:left;
+     width:200px;
       /*background-color:yellow;*/
       padding-top:15px;/*15px more is added from image margin, so gutter is 30px*/
       padding-bottom:10px;/*10px, +15px from image, and 15 from the main-content, makes total bottom padding equal 40px*/
   }
+  .img-wrapper-rt{
+    float:left;
+    margin-left:30px;
+    width:200px;
+     /*background-color:yellow;*/
+     padding-top:15px;/*15px more is added from image margin, so gutter is 30px*/
+     padding-bottom:10px;/*10px, +15px from image, and 15 from the main-content, makes total bottom padding equal 40px*/
+ }
  .image {
-    float: left;
-    margin: 15px 15px 15px 0px;/*40px in the middle of each box*/
+    position:static;
+    /*margin: 15px 15px 15px 0px;*//*40px in the middle of each box*/
+    margin-top:15px;
+    margin-bottom:15px;
     /*border:1px solid red;*/
   }
   .left-padding{
@@ -154,6 +166,28 @@ main{
     clear:both;
     margin:0;
   }
+
+  .image-container {
+    position: relative; 
+    /*max-width: 800px;*/ /* Maximum width */
+    margin: 0 auto; /* Center it */
+    /*overflow:hidden;*/
+}
+
+.image-container p{
+    position: absolute; /* Position the background text */
+    bottom: 10px; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(74,170,165); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    /*border: 1px solid green;*/
+    /*height:50px;*/
+    width: 100%; /* Full width */
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
+   /* margin-bottom:10px;*/
+    /*padding: 20px;*/ /* Some padding */
+}
 
 /***************************
 CONTACT FORM
